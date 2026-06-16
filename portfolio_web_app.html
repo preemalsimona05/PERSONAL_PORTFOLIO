@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preemal Simona Pinto | Portfolio</title>
+    <!-- Google Fonts: Space Grotesk & Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Custom Style Config & Custom Fonts Integration -->
+    <style>
+        /* Modern sci-fi/geometric look for headings */
+        h1, h2, h3, h4, .font-display {
+            font-family: 'Space Grotesk', sans-serif !important;
+            letter-spacing: -0.02em;
+        }
+        
+        /* Premium circular curves for body reading & elements */
+        body, p, span, li, a, label, input, textarea, button, .font-sans {
+            font-family: 'Outfit', sans-serif !important;
+            letter-spacing: -0.01em;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-slate-900 text-slate-50 selection:bg-teal-500/30 selection:text-teal-200">
+
+    <!-- Navigation Bar -->
+    <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 bg-transparent py-6">
+        <div class="container mx-auto px-6 md:px-12 flex justify-between items-center">
+            <a href="#home" class="text-xl font-bold bg-gradient-to-r from-teal-400 to-blue-500 bg-clip-text text-transparent">
+                PSP.
+            </a>
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-300">
+                <a href="#about" class="hover:text-teal-400 transition-colors">About</a>
+                <a href="#projects" class="hover:text-teal-400 transition-colors">Projects</a>
+                <a href="#journey" class="hover:text-teal-400 transition-colors">Journey</a>
+                <a href="#contact" class="hover:text-teal-400 transition-colors">Contact</a>
+            </div>
+            <a 
+                href="#contact"
+                class="px-4 py-2 rounded-full bg-teal-500/10 text-teal-400 border border-teal-500/20 hover:bg-teal-500 hover:text-slate-900 transition-all text-sm font-semibold"
+            >
+                Let's Talk
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-32 pb-20 md:pt-48 md:pb-32 px-6 relative overflow-hidden">
+        <!-- Abstract Background Orbs -->
+        <div class="absolute top-20 left-10 w-72 h-72 bg-teal-500/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-10 right-10 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="container mx-auto max-w-5xl relative z-10 flex flex-col items-center text-center">
+            <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-slate-800 border border-slate-700 text-xs text-slate-300 mb-8">
+                <span class="w-2 h-2 rounded-full bg-teal-400 animate-pulse"></span>
+                <span>Available for Internships & Projects</span>
+            </div>
+            
+            <h1 class="text-5xl md:text-7xl font-extrabold text-white tracking-tight mb-6">
+                Hi, I'm <br class="md:hidden"/>
+                <span class="bg-gradient-to-r from-teal-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                    Preemal Simona Pinto
+                </span>
+            </h1>
+            
+            <p class="text-xl md:text-2xl text-slate-400 max-w-2xl font-light mb-10 leading-relaxed">
+                B.Tech Computer Science & Engineering Student. Building secure, AI-driven software solutions & resilient digital products.
+            </p>
+
+            <div class="flex flex-wrap justify-center gap-4 mb-16">
+                <a href="#projects" class="px-8 py-3 rounded-full bg-teal-500 text-slate-900 font-bold hover:bg-teal-400 transition-colors flex items-center group">
+                    View Projects
+                    <i data-lucide="chevron-right" class="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                </a>
+                <a href="https://github.com/preemalsimona05" target="_blank" rel="noreferrer" class="px-8 py-3 rounded-full bg-slate-800 text-white font-medium hover:bg-slate-700 transition-colors flex items-center border border-slate-700">
+                    <i data-lucide="github" class="mr-2 w-4 h-4"></i>
+                    GitHub
+                </a>
+                <a href="https://linkedin.com/in/preemalsimona05" target="_blank" rel="noreferrer" class="px-8 py-3 rounded-full bg-slate-800 text-white font-medium hover:bg-slate-700 transition-colors flex items-center border border-slate-700">
+                    <i data-lucide="linkedin" class="mr-2 w-4 h-4"></i>
+                    LinkedIn
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-slate-400 text-sm max-w-3xl w-full">
+                <div class="flex items-center justify-center space-x-2 bg-slate-900/50 p-4 rounded-2xl border border-slate-800">
+                    <i data-lucide="mail" class="w-5 h-5 text-teal-400"></i>
+                    <span>preemalpinto5@gmail.com</span>
+                </div>
+                <div class="flex items-center justify-center space-x-2 bg-slate-900/50 p-4 rounded-2xl border border-slate-800">
+                    <i data-lucide="phone" class="w-5 h-5 text-teal-400"></i>
+                    <span>8147231555</span>
+                </div>
+                <div class="flex items-center justify-center space-x-2 bg-slate-900/50 p-4 rounded-2xl border border-slate-800">
+                    <i data-lucide="map-pin" class="w-5 h-5 text-teal-400"></i>
+                    <span>Mangalore, India</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-6 bg-slate-900/50 border-t border-slate-800/50">
+        <div class="container mx-auto max-w-5xl">
+            <div class="grid md:grid-cols-12 gap-12 items-start">
+                
+                <div class="md:col-span-7">
+                    <div class="mb-12 md:mb-16">
+                        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">About Me</h2>
+                        <p class="text-slate-400 text-lg">Bridging the gap between intelligent systems and human-centric design.</p>
+                        <div class="w-20 h-1 bg-gradient-to-r from-teal-500 to-blue-500 rounded-full mt-6"></div>
+                    </div>
+                    
+                    <div class="text-slate-300 leading-relaxed text-lg mb-8 space-y-5">
+                        <p>
+                            I'm Preemal Simona Pinto, a passionate B.Tech student in Computer Science and Engineering at St. Aloysius University, Mangalore. I specialize in the powerful intersection of AI, Software Development, and Cybersecurity.
+                        </p>
+                        <p>
+                            I thrive on building intelligent, secure, and resilient digital solutions—leveraging modern rapid prototyping workflows to deliver production-ready software while keeping data security and system integrity at the core of what I do.
+                        </p>
+                        <p>
+                            Beyond the keyboard, I am an active communicator and collaborative team player. I bring strong public speaking skills, active listening abilities, and a passion for team leadership. I believe the best and most secure technology is built through active collaboration. Fluent in English, Hindi, and Kannada.
+                        </p>
+                    </div>
+
+                    <div class="mb-8 p-6 rounded-2xl bg-slate-800/30 border border-slate-700/50">
+                        <h4 class="text-white font-semibold mb-4 text-lg">Focus Areas</h4>
+                        <ul class="space-y-3">
+                            <li class="flex items-start text-slate-300">
+                                <span class="text-teal-400 mr-3 font-bold">→</span>
+                                <span>AI and intelligent system design</span>
+                            </li>
+                            <li class="flex items-start text-slate-300">
+                                <span class="text-teal-400 mr-3 font-bold">→</span>
+                                <span>Cybersecurity and secure architecture</span>
+                            </li>
+                            <li class="flex items-start text-slate-300">
+                                <span class="text-teal-400 mr-3 font-bold">→</span>
+                                <span>Rapid prototyping with modern development workflows</span>
+                            </li>
+                            <li class="flex items-start text-slate-300">
+                                <span class="text-teal-400 mr-3 font-bold">→</span>
+                                <span>Collaborative problem-solving and team communication</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-3 py-1 rounded-md bg-slate-800 text-slate-300 text-sm border border-slate-700">English</span>
+                        <span class="px-3 py-1 rounded-md bg-slate-800 text-slate-300 text-sm border border-slate-700">Hindi</span>
+                        <span class="px-3 py-1 rounded-md bg-slate-800 text-slate-300 text-sm border border-slate-700">Kannada</span>
+                    </div>
+                </div>
+
+                <div class="md:col-span-5 space-y-6 md:sticky md:top-32">
+                    <div class="bg-slate-800/50 p-6 rounded-2xl border border-slate-700/50">
+                        <h3 class="text-white font-semibold flex items-center mb-4">
+                            <i data-lucide="code" class="w-5 h-5 mr-2 text-teal-400"></i>
+                            Technical Arsenal
+                        </h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1.5 rounded-lg bg-teal-500/10 text-teal-300 text-sm font-medium border border-teal-500/20">AI & Machine Learning</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-teal-500/10 text-teal-300 text-sm font-medium border border-teal-500/20">Software Development</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-teal-500/10 text-teal-300 text-sm font-medium border border-teal-500/20">Full Stack Development</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-teal-500/10 text-teal-300 text-sm font-medium border border-teal-500/20">Cybersecurity</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-teal-500/10 text-teal-300 text-sm font-medium border border-teal-500/20">Python</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-teal-500/10 text-teal-300 text-sm font-medium border border-teal-500/20">React 19</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-teal-500/10 text-teal-300 text-sm font-medium border border-teal-500/20">TypeScript</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-teal-500/10 text-teal-300 text-sm font-medium border border-teal-500/20">FastAPI</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-teal-500/10 text-teal-300 text-sm font-medium border border-teal-500/20">TensorFlow</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-teal-500/10 text-teal-300 text-sm font-medium border border-teal-500/20">SQLAlchemy</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-800/50 p-6 rounded-2xl border border-slate-700/50">
+                        <h3 class="text-white font-semibold flex items-center mb-4">
+                            <i data-lucide="mic" class="w-5 h-5 mr-2 text-blue-400"></i>
+                            Core Competencies
+                        </h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1.5 rounded-lg bg-blue-500/10 text-blue-300 text-sm font-medium border border-blue-500/20">Public Speaking</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-blue-500/10 text-blue-300 text-sm font-medium border border-blue-500/20">Team Collaboration</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-blue-500/10 text-blue-300 text-sm font-medium border border-blue-500/20">Active Listening</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-blue-500/10 text-blue-300 text-sm font-medium border border-blue-500/20">Communication</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-blue-500/10 text-blue-300 text-sm font-medium border border-blue-500/20">Rapid Prototyping</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-blue-500/10 text-blue-300 text-sm font-medium border border-blue-500/20">Team Leadership</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-800/50 p-6 rounded-2xl border border-slate-700/50">
+                        <h3 class="text-white font-semibold mb-4 flex items-center">
+                            <i data-lucide="sparkles" class="w-5 h-5 mr-2 text-amber-400"></i>
+                            Beyond Coding
+                        </h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-center text-slate-300 bg-slate-900/50 p-3 rounded-xl border border-slate-700/50">
+                                <span class="text-xl mr-3 leading-none">🎤</span>
+                                <span class="text-sm font-medium">Public speaking and sharing knowledge</span>
+                            </li>
+                            <li class="flex items-center text-slate-300 bg-slate-900/50 p-3 rounded-xl border border-slate-700/50">
+                                <span class="text-xl mr-3 leading-none">🎭</span>
+                                <span class="text-sm font-medium">Dramatic acting and creative expression</span>
+                            </li>
+                            <li class="flex items-center text-slate-300 bg-slate-900/50 p-3 rounded-xl border border-slate-700/50">
+                                <span class="text-xl mr-3 leading-none">👥</span>
+                                <span class="text-sm font-medium">Active communication and collaborative teamwork</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-24 px-6 relative">
+        <div class="container mx-auto max-w-5xl">
+            <div class="mb-12 md:mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Featured Projects</h2>
+                <p class="text-slate-400 text-lg">Architecting AI-driven solutions and resilient systems.</p>
+                <div class="w-20 h-1 bg-gradient-to-r from-teal-500 to-blue-500 rounded-full mt-6"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Project 1 -->
+                <div class="group relative bg-slate-800/40 hover:bg-slate-800/80 rounded-3xl p-8 border border-slate-700 transition-all duration-300 hover:border-teal-500/50 hover:shadow-[0_0_40px_-15px_rgba(20,184,166,0.3)]">
+                    <div class="absolute top-8 right-8 w-12 h-12 bg-slate-900 rounded-full flex items-center justify-center border border-slate-700 group-hover:scale-110 transition-transform">
+                        <i data-lucide="brain-circuit" class="w-6 h-6 text-teal-400"></i>
+                    </div>
+                    
+                    <h3 class="text-2xl font-bold text-white mb-2 pr-16">HEMOVISION AI</h3>
+                    <p class="text-teal-400 text-sm font-semibold mb-6 uppercase tracking-wider">Full-Stack Medical Triage & AI Diagnostics</p>
+                    
+                    <p class="text-slate-300 leading-relaxed mb-8">
+                        Engineered a full-stack application to predict Dengue risk levels and estimate platelet counts. Built an AI inference engine integrating TensorFlow and NumPy to analyze visual biometrics (ocular/palmar scans) alongside patient history.
+                    </p>
+                    
+                    <div class="flex flex-wrap gap-2 mt-auto">
+                        <span class="px-3 py-1 text-xs font-medium rounded-full bg-slate-900 text-slate-400 border border-slate-700">React 19</span>
+                        <span class="px-3 py-1 text-xs font-medium rounded-full bg-slate-900 text-slate-400 border border-slate-700">TypeScript</span>
+                        <span class="px-3 py-1 text-xs font-medium rounded-full bg-slate-900 text-slate-400 border border-slate-700">FastAPI</span>
+                        <span class="px-3 py-1 text-xs font-medium rounded-full bg-slate-900 text-slate-400 border border-slate-700">Python</span>
+                        <span class="px-3 py-1 text-xs font-medium rounded-full bg-slate-900 text-slate-400 border border-slate-700">TensorFlow</span>
+                        <span class="px-3 py-1 text-xs font-medium rounded-full bg-slate-900 text-slate-400 border border-slate-700">SQLite</span>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="group relative bg-slate-800/40 hover:bg-slate-800/80 rounded-3xl p-8 border border-slate-700 transition-all duration-300 hover:border-teal-500/50 hover:shadow-[0_0_40px_-15px_rgba(20,184,166,0.3)]">
+                    <div class="absolute top-8 right-8 w-12 h-12 bg-slate-900 rounded-full flex items-center justify-center border border-slate-700 group-hover:scale-110 transition-transform">
+                        <i data-lucide="shield-alert" class="w-6 h-6 text-blue-400"></i>
+                    </div>
+                    
+                    <h3 class="text-2xl font-bold text-white mb-2 pr-16">ZENITH</h3>
+                    <p class="text-teal-400 text-sm font-semibold mb-6 uppercase tracking-wider">Autonomous AI Trust Engine & Self-Healing Debug System</p>
+                    
+                    <p class="text-slate-300 leading-relaxed mb-8">
+                        Developed a cutting-edge security and resilient infrastructure solution under tight deadlines for the Hackfest innovation competition. Focused on building a specialized AI trust layer to handle logic verification and automated error handling.
+                    </p>
+                    
+                    <div class="flex flex-wrap gap-2 mt-auto">
+                        <span class="px-3 py-1 text-xs font-medium rounded-full bg-slate-900 text-slate-400 border border-slate-700">AI Trust Layer</span>
+                        <span class="px-3 py-1 text-xs font-medium rounded-full bg-slate-900 text-slate-400 border border-slate-700">Logic Verification</span>
+                        <span class="px-3 py-1 text-xs font-medium rounded-full bg-slate-900 text-slate-400 border border-slate-700">Automated Debugging</span>
+                        <span class="px-3 py-1 text-xs font-medium rounded-full bg-slate-900 text-slate-400 border border-slate-700">Cybersecurity</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Journey Section -->
+    <section id="journey" class="py-24 px-6 bg-slate-900/50 border-t border-slate-800/50">
+        <div class="container mx-auto max-w-5xl grid md:grid-cols-2 gap-16">
+            
+            <!-- Timeline Column -->
+            <div>
+                <div class="mb-12 md:mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Education & Experience</h2>
+                    <p class="text-slate-400 text-lg">My academic and professional trajectory.</p>
+                    <div class="w-20 h-1 bg-gradient-to-r from-teal-500 to-blue-500 rounded-full mt-6"></div>
+                </div>
+
+                <div class="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-700 before:to-transparent">
+                    
+                    <!-- Timeline Item 1 -->
+                    <div class="relative flex items-start space-x-6">
+                        <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-slate-900 bg-teal-500 text-slate-900 shrink-0 z-10 shadow">
+                            <i data-lucide="graduation-cap" class="w-5 h-5"></i>
+                        </div>
+                        <div class="p-6 rounded-2xl bg-slate-800/50 border border-slate-700 hover:border-teal-500/30 transition-colors w-full">
+                            <span class="font-bold text-teal-400 text-sm">07/2025 - Present</span>
+                            <h4 class="font-bold text-lg text-white mb-1 mt-1">B.Tech in Computer Science and Engineering</h4>
+                            <p class="text-sm font-medium text-slate-400 mb-3">St. Aloysius (Deemed to be University)</p>
+                            <p class="text-slate-300 text-sm leading-relaxed">Focusing on AI, software engineering, and secure system architecture.</p>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 2 -->
+                    <div class="relative flex items-start space-x-6">
+                        <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-slate-900 bg-teal-500 text-slate-900 shrink-0 z-10 shadow">
+                            <i data-lucide="graduation-cap" class="w-5 h-5"></i>
+                        </div>
+                        <div class="p-6 rounded-2xl bg-slate-800/50 border border-slate-700 hover:border-teal-500/30 transition-colors w-full">
+                            <span class="font-bold text-teal-400 text-sm">06/2023 - 03/2025</span>
+                            <h4 class="font-bold text-lg text-white mb-1 mt-1">Pre-University (PU) / Class 12</h4>
+                            <p class="text-sm font-medium text-slate-400 mb-3">St. Aloysius PU College, Mangalore</p>
+                            <p class="text-slate-300 text-sm leading-relaxed">Foundation in science and mathematics.</p>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 3 -->
+                    <div class="relative flex items-start space-x-6">
+                        <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-slate-900 bg-teal-500 text-slate-900 shrink-0 z-10 shadow">
+                            <i data-lucide="award" class="w-5 h-5"></i>
+                        </div>
+                        <div class="p-6 rounded-2xl bg-slate-800/50 border border-slate-700 hover:border-teal-500/30 transition-colors w-full">
+                            <span class="font-bold text-teal-400 text-sm">2025 - present</span>
+                            <h4 class="font-bold text-lg text-white mb-1 mt-1">Student Innovation Ambassador</h4>
+                            <p class="text-sm font-medium text-slate-400 mb-3">MoE's Innovation Cell & AICTE, Government of India</p>
+                            <p class="text-slate-300 text-sm leading-relaxed">Appointed and certified at both Foundation and Advanced levels after rigorous training to drive institutional innovation and entrepreneurship.</p>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 4 -->
+                    <div class="relative flex items-start space-x-6">
+                        <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-slate-900 bg-teal-500 text-slate-900 shrink-0 z-10 shadow">
+                            <i data-lucide="terminal-square" class="w-5 h-5"></i>
+                        </div>
+                        <div class="p-6 rounded-2xl bg-slate-800/50 border border-slate-700 hover:border-teal-500/30 transition-colors w-full">
+                            <span class="font-bold text-teal-400 text-sm">Recent</span>
+                            <h4 class="font-bold text-lg text-white mb-1 mt-1">Hackathon Innovator & Competitor</h4>
+                            <p class="text-sm font-medium text-slate-400 mb-3">Hackfest & FutureSprint</p>
+                            <p class="text-slate-300 text-sm leading-relaxed">Collaborated in fast-paced team environments to design and rapidly prototype real-world tech applications like Zenith and Sustainability AI.</p>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 5 -->
+                    <div class="relative flex items-start space-x-6">
+                        <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-slate-900 bg-teal-500 text-slate-900 shrink-0 z-10 shadow">
+                            <i data-lucide="mic" class="w-5 h-5"></i>
+                        </div>
+                        <div class="p-6 rounded-2xl bg-slate-800/50 border border-slate-700 hover:border-teal-500/30 transition-colors w-full">
+                            <span class="font-bold text-teal-400 text-sm">Past</span>
+                            <h4 class="font-bold text-lg text-white mb-1 mt-1">Bilingual Radio Broadcast Co-Host</h4>
+                            <p class="text-sm font-medium text-slate-400 mb-3">Radio Sarang, Mangalore</p>
+                            <p class="text-slate-300 text-sm leading-relaxed">Co-hosted 'Simple English 2.0', successfully teaching English to the public through real-time Kannada translation.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Certifications Column -->
+            <div>
+                <div class="mb-12 md:mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Certifications</h2>
+                    <p class="text-slate-400 text-lg">Continuous learning and validation.</p>
+                    <div class="w-20 h-1 bg-gradient-to-r from-teal-500 to-blue-500 rounded-full mt-6"></div>
+                </div>
+
+                <div class="space-y-4">
+                    <div class="flex items-start p-5 rounded-2xl bg-slate-800/30 border border-slate-700/50 hover:bg-slate-800/60 transition-colors">
+                        <i data-lucide="award" class="w-6 h-6 text-blue-400 mr-4 shrink-0 mt-1"></i>
+                        <p class="text-slate-300 font-medium leading-relaxed">Certified Innovation Ambassador (Advanced Level) - MoE's Innovation Cell & AICTE (2026)</p>
+                    </div>
+                    <div class="flex items-start p-5 rounded-2xl bg-slate-800/30 border border-slate-700/50 hover:bg-slate-800/60 transition-colors">
+                        <i data-lucide="award" class="w-6 h-6 text-blue-400 mr-4 shrink-0 mt-1"></i>
+                        <p class="text-slate-300 font-medium leading-relaxed">Certified Innovation Ambassador (Foundation Level) - MoE's Innovation Cell & AICTE (2026)</p>
+                    </div>
+                    <div class="flex items-start p-5 rounded-2xl bg-slate-800/30 border border-slate-700/50 hover:bg-slate-800/60 transition-colors">
+                        <i data-lucide="award" class="w-6 h-6 text-blue-400 mr-4 shrink-0 mt-1"></i>
+                        <p class="text-slate-300 font-medium leading-relaxed">Build Your Own Chatbot - IBM Developer Skills Network (Cognitive Class, 2026)</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 px-6 relative">
+        <div class="container mx-auto max-w-5xl">
+            <div class="mb-12 md:mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Get In Touch</h2>
+                <p class="text-slate-400 text-lg">Let's build something amazing together.</p>
+                <div class="w-20 h-1 bg-gradient-to-r from-teal-500 to-blue-500 rounded-full mt-6"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 lg:gap-20">
+                
+                <!-- Contact Information -->
+                <div class="space-y-8">
+                    <p class="text-slate-300 text-lg leading-relaxed">
+                        Whether you have a question about my projects, are interested in a collaboration, or just want to say hi, my inbox is always open!
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-slate-800 border border-slate-700 rounded-full flex items-center justify-center shrink-0">
+                                <i data-lucide="mail" class="w-5 h-5 text-teal-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-medium mb-1">Email</h4>
+                                <a href="mailto:preemalpinto5@gmail.com" class="text-slate-400 hover:text-teal-400 transition-colors">
+                                    preemalpinto5@gmail.com
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-slate-800 border border-slate-700 rounded-full flex items-center justify-center shrink-0">
+                                <i data-lucide="phone" class="w-5 h-5 text-teal-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-medium mb-1">Phone</h4>
+                                <a href="tel:8147231555" class="text-slate-400 hover:text-teal-400 transition-colors">
+                                    8147231555
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-slate-800 border border-slate-700 rounded-full flex items-center justify-center shrink-0">
+                                <i data-lucide="map-pin" class="w-5 h-5 text-teal-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-medium mb-1">Location</h4>
+                                <span class="text-slate-400">
+                                    Mangalore, India
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="bg-slate-800/40 p-8 rounded-3xl border border-slate-700">
+                    <!-- Securely hooks into Formspree/Web3Forms. Replace "YOUR_FORM_ID" directly inside action attribute. -->
+                    <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-6">
+                        <div class="space-y-2">
+                            <label for="name" class="text-sm font-medium text-slate-300">Your Name</label>
+                            <input 
+                                type="text" 
+                                id="name" 
+                                name="name"
+                                required
+                                placeholder="John Doe"
+                                class="w-full bg-slate-900/50 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder:text-slate-600 focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500 transition-all"
+                            />
+                        </div>
+                        
+                        <div class="space-y-2">
+                            <label for="email" class="text-sm font-medium text-slate-300">Your Email</label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email"
+                                required
+                                placeholder="john@example.com"
+                                class="w-full bg-slate-900/50 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder:text-slate-600 focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500 transition-all"
+                            />
+                        </div>
+                        
+                        <div class="space-y-2">
+                            <label for="message" class="text-sm font-medium text-slate-300">Message</label>
+                            <textarea 
+                                id="message" 
+                                name="message"
+                                required
+                                rows="4"
+                                placeholder="Hi Preemal, I'd like to talk about..."
+                                class="w-full bg-slate-900/50 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder:text-slate-600 focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500 transition-all resize-none"
+                            ></textarea>
+                        </div>
+                        
+                        <button 
+                            type="submit" 
+                            id="submitButton"
+                            class="w-full bg-teal-500 hover:bg-teal-400 text-slate-900 font-bold py-3 px-6 rounded-xl transition-all flex items-center justify-center space-x-2 disabled:opacity-70 disabled:cursor-not-allowed"
+                        >
+                            <span id="buttonText">Send Message</span>
+                            <i data-lucide="send" id="buttonIcon" class="w-4 h-4 ml-1"></i>
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 py-12 px-6 border-t border-slate-800">
+        <div class="container mx-auto max-w-5xl flex flex-col md:flex-row justify-between items-center">
+            <div class="text-center md:text-left mb-6 md:mb-0">
+                <h2 class="text-2xl font-bold bg-gradient-to-r from-teal-400 to-blue-500 bg-clip-text text-transparent">PSP.</h2>
+                <p class="text-slate-500 mt-2">© <span id="year"></span> Preemal Simona Pinto. All rights reserved.</p>
+            </div>
+            
+            <div class="flex space-x-6">
+                <a href="https://github.com/preemalsimona05" target="_blank" rel="noreferrer" class="text-slate-400 hover:text-white transition-colors">
+                    <i data-lucide="github" class="w-6 h-6"></i>
+                    <span class="sr-only">GitHub</span>
+                </a>
+                <a href="https://linkedin.com/in/preemalsimona05" target="_blank" rel="noreferrer" class="text-slate-400 hover:text-white transition-colors">
+                    <i data-lucide="linkedin" class="w-6 h-6"></i>
+                    <span class="sr-only">LinkedIn</span>
+                </a>
+                <a href="mailto:preemalpinto5@gmail.com" class="text-slate-400 hover:text-white transition-colors">
+                    <i data-lucide="mail" class="w-6 h-6"></i>
+                    <span class="sr-only">Email</span>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript logic for scroll behaviors and API submission feedback -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Dynamically set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Scroll listener to toggle premium look on Navbar
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-slate-900/90', 'backdrop-blur-md', 'border-b', 'border-slate-800', 'py-4');
+                navbar.classList.remove('bg-transparent', 'py-6');
+            } else {
+                navbar.classList.remove('bg-slate-900/90', 'backdrop-blur-md', 'border-b', 'border-slate-800', 'py-4');
+                navbar.classList.add('bg-transparent', 'py-6');
+            }
+        });
+
+        // Contact form simulation & custom visual feedback
+        const form = document.getElementById('contactForm');
+        const submitButton = document.getElementById('submitButton');
+        const buttonText = document.getElementById('buttonText');
+        const buttonIcon = document.getElementById('buttonIcon');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            // Visual transition to 'Sending...' state
+            submitButton.disabled = true;
+            buttonText.textContent = "Sending...";
+            submitButton.classList.add('opacity-70');
+            
+            // If the action URL is default or still has "YOUR_FORM_ID", simulate sending locally
+            const isLocalDemo = form.getAttribute('action').includes('YOUR_FORM_ID');
+
+            if (isLocalDemo) {
+                setTimeout(() => {
+                    buttonText.textContent = "Message Sent!";
+                    // Switch icon programmatically
+                    buttonIcon.setAttribute('data-lucide', 'check-circle-2');
+                    lucide.createIcons();
+                    
+                    form.reset();
+
+                    setTimeout(() => {
+                        submitButton.disabled = false;
+                        buttonText.textContent = "Send Message";
+                        buttonIcon.setAttribute('data-lucide', 'send');
+                        lucide.createIcons();
+                        submitButton.classList.remove('opacity-70');
+                    }, 3000);
+                }, 1200);
+            } else {
+                // Execute real Email API post
+                try {
+                    const response = await fetch(form.action, {
+                        method: 'POST',
+                        body: new FormData(form),
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    });
+                    
+                    if (response.ok) {
+                        buttonText.textContent = "Message Sent!";
+                        buttonIcon.setAttribute('data-lucide', 'check-circle-2');
+                        lucide.createIcons();
+                        form.reset();
+                    } else {
+                        throw new Error('Form submission failed');
+                    }
+                } catch (err) {
+                    alert("Something went wrong. Please check your action key or mail directly.");
+                    buttonText.textContent = "Send Message";
+                } finally {
+                    setTimeout(() => {
+                        submitButton.disabled = false;
+                        buttonText.textContent = "Send Message";
+                        buttonIcon.setAttribute('data-lucide', 'send');
+                        lucide.createIcons();
+                        submitButton.classList.remove('opacity-70');
+                    }, 3000);
+                }
+            }
+        });
+    </script>
+</body>
+</html>
