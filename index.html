@@ -444,8 +444,9 @@
 
                 <!-- Contact Form -->
                 <div class="bg-slate-800/40 p-8 rounded-3xl border border-slate-700">
-                    <!-- Securely hooks into Formspree/Web3Forms. Replace "YOUR_FORM_ID" directly inside action attribute. -->
-                    <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-6">
+                    <!-- Securely hooks into Web3Forms. Access key is configured inside dynamic JavaScript below. -->
+                    <form id="contactForm" class="space-y-6">
+                        <!-- Replace "YOUR_ACCESS_KEY_HERE" with your actual Web3Forms access key below in the script! -->
                         <div class="space-y-2">
                             <label for="name" class="text-sm font-medium text-slate-300">Your Name</label>
                             <input 
@@ -542,11 +543,14 @@
             }
         });
 
-        // Contact form simulation & custom visual feedback
+        // Contact form Web3Forms integration
         const form = document.getElementById('contactForm');
         const submitButton = document.getElementById('submitButton');
         const buttonText = document.getElementById('buttonText');
         const buttonIcon = document.getElementById('buttonIcon');
+
+        // IMPORTANT: Replace this placeholder string with your real Web3Forms Access Key!
+        const WEB3FORMS_ACCESS_KEY = "YOUR_ACCESS_KEY_HERE";
 
         form.addEventListener('submit', async (e) => {
             e.preventDefault();
@@ -556,16 +560,22 @@
             buttonText.textContent = "Sending...";
             submitButton.classList.add('opacity-70');
             
-            // If the action URL is default or still has "YOUR_FORM_ID", simulate sending locally
-            const isLocalDemo = form.getAttribute('action').includes('YOUR_FORM_ID');
+            // Build the submission payload
+            const formData = new FormData(form);
+            formData.append("access_key", WEB3FORMS_ACCESS_KEY);
+            formData.append("subject", "New Portfolio Submission - " + document.getElementById('name').value);
+            formData.append("from_name", "Preemal Pinto Portfolio");
 
-            if (isLocalDemo) {
+            const object = Object.fromEntries(formData);
+            const jsonPayload = JSON.stringify(object);
+
+            // If the user hasn't replaced the placeholder yet, run a friendly offline mock
+            if (WEB3FORMS_ACCESS_KEY === "YOUR_ACCESS_KEY_HERE") {
+                console.warn("Web3Forms API key is using placeholder. Running mock simulation.");
                 setTimeout(() => {
                     buttonText.textContent = "Message Sent!";
-                    // Switch icon programmatically
                     buttonIcon.setAttribute('data-lucide', 'check-circle-2');
                     lucide.createIcons();
-                    
                     form.reset();
 
                     setTimeout(() => {
@@ -575,38 +585,48 @@
                         lucide.createIcons();
                         submitButton.classList.remove('opacity-70');
                     }, 3000);
-                }, 1200);
-            } else {
-                // Execute real Email API post
-                try {
-                    const response = await fetch(form.action, {
-                        method: 'POST',
-                        body: new FormData(form),
-                        headers: {
-                            'Accept': 'application/json'
-                        }
-                    });
-                    
-                    if (response.ok) {
-                        buttonText.textContent = "Message Sent!";
-                        buttonIcon.setAttribute('data-lucide', 'check-circle-2');
-                        lucide.createIcons();
-                        form.reset();
-                    } else {
-                        throw new Error('Form submission failed');
-                    }
-                } catch (err) {
-                    alert("Something went wrong. Please check your action key or mail directly.");
-                    buttonText.textContent = "Send Message";
-                } finally {
-                    setTimeout(() => {
-                        submitButton.disabled = false;
-                        buttonText.textContent = "Send Message";
-                        buttonIcon.setAttribute('data-lucide', 'send');
-                        lucide.createIcons();
-                        submitButton.classList.remove('opacity-70');
-                    }, 3000);
+                }, 1500);
+                return;
+            }
+
+            // Real secure POST request directly to Web3Forms API
+            try {
+                const response = await fetch("https://api.web3forms.com/submit", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "Accept": "application/json"
+                    },
+                    body: jsonPayload
+                });
+                
+                const responseData = await response.json();
+                
+                if (response.status === 200 || responseData.success) {
+                    buttonText.textContent = "Message Sent!";
+                    buttonIcon.setAttribute('data-lucide', 'check-circle-2');
+                    lucide.createIcons();
+                    form.reset();
+                } else {
+                    throw new Error(responseData.message || "Something went wrong during submission.");
                 }
+            } catch (err) {
+                console.error("Submission Error: ", err);
+                buttonText.textContent = "Failed to Send";
+                // Temporary error color reset
+                submitButton.classList.remove('bg-teal-500', 'hover:bg-teal-400');
+                submitButton.classList.add('bg-red-500');
+            } finally {
+                // Return button to active state after 3 seconds
+                setTimeout(() => {
+                    submitButton.disabled = false;
+                    buttonText.textContent = "Send Message";
+                    buttonIcon.setAttribute('data-lucide', 'send');
+                    lucide.createIcons();
+                    
+                    submitButton.classList.remove('opacity-70', 'bg-red-500');
+                    submitButton.classList.add('bg-teal-500', 'hover:bg-teal-400');
+                }, 3000);
             }
         });
     </script>
